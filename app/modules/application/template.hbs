@@ -1,0 +1,5 @@
+{{#search-bar as |search obj|}}
+    {{search.tips select-time=obj.selectTime}}
+    {{search.modal year=obj.year month=obj.month onRefresh=(action "sendXhr")}}
+{{/search-bar}}
+{{outlet}}

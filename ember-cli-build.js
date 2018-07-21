@@ -6,6 +6,20 @@ module.exports = function(defaults) {
     let sourceMap = process.env.EMBER_ENV === 'production' ? 'false' : 'inline';
     console.info(sourceMap);
 	let app = new EmberApp(defaults, {
+        storeConfigInMeta: false,
+        fingerprint: {
+			enabled: false
+		},
+        sassOptions: {
+			includePaths: [
+				'node_modules/bootstrap-sass/assets/stylesheets'
+			]
+		},
+        'ember-bootstrap': {
+			'bootstrapVsesion': 3,
+			'importBootstrapFont': true,
+			'importBootstrapCSS': false
+		},
 		babel: {
             sourceMaps: sourceMap
         }

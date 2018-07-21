@@ -14,10 +14,9 @@ module.exports = {
 	env: {
 		browser: true
 	},
-	// globals: {
-	//     'heimdall': true,
-	// },
-	rules: {},
+	rules: {
+		"no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }]
+	},
 	overrides: [
 		// node files
 		{
